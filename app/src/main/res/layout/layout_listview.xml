@@ -10,3 +10,9 @@
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
+<!--    <TextView
+        android:id="@+id/fragment_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="@string/textview_frameTx"/>-->

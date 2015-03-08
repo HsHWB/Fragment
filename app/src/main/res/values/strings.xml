@@ -3,7 +3,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="list_item_position">第%1%s个列表项</string>
+    <string name="list_item_position">第%1$s个列表项</string>
     <string name="button">fragment list view</string>
+    <string name="textview_frameTx">这是一个textview</string>
 
 </resources>

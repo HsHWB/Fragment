@@ -31,16 +31,6 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     @Override
-    public void registerDataSetObserver(DataSetObserver observer) {
-
-    }
-
-    @Override
-    public void unregisterDataSetObserver(DataSetObserver observer) {
-
-    }
-
-    @Override
     public int getCount() {
         return this.count;
     }
@@ -57,7 +47,7 @@ public class ListViewAdapter extends BaseAdapter {
 
     @Override
     public boolean hasStableIds() {
-        return false;
+        return true;
     }
 
     @Override
@@ -66,23 +56,23 @@ public class ListViewAdapter extends BaseAdapter {
         ll.setOrientation(LinearLayout.HORIZONTAL);//设置线性布局的朝向，可取horizontal和vertical两种排列方式
         TextView tx = new TextView(context);
         String itemPosition = context.getResources().getString(R.string.list_item_position);
-        tx.setText(String.format(itemPosition, position));
+        tx.setText(String.format(itemPosition, String.valueOf(position)));
         ll.addView(tx);
         return ll;
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        return 0;
-    }
-
-    @Override
-    public int getViewTypeCount() {
-        return 0;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return false;
-    }
+//    @Override
+//    public int getItemViewType(int position) {
+//        return position;
+//    }
+//
+//    @Override
+//    public int getViewTypeCount() {
+//        return 0;//这步使lisview崩掉
+//    }
+//
+//    @Override
+//    public boolean isEmpty() {
+//        return false;
+//    }
 }

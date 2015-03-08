@@ -30,12 +30,14 @@ public class MainAcitivity extends Activity{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                fragmentManager = getFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
                 fragment = new com.example.fragment.fragment();
-                fragmentTransaction = getFragmentManager().beginTransaction();
-                fragmentTransaction.add(R.id.framLayout, fragment);
+                fragmentTransaction.replace(R.id.framLayout, fragment);
                 fragmentTransaction.commit();
             }
         });
+
     }
 
     @Override
@@ -47,4 +49,5 @@ public class MainAcitivity extends Activity{
     protected void onResume(){
         super.onResume();
     }
+
 }
